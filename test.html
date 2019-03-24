@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Main</title>
+  <link rel="stylesheet" href="whatever-you-want.css">
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <div id="elm"></div>
+  <button onClick="sendMessage()">Receive Message</button>
+  <script>
+  const userID = '123456';
+  const app = Elm.Main.init({
+    node: document.getElementById('elm'),
+    flags: { userID },
+  });
+  app.ports.sendMsg.subscribe( msg => {
+    console.log({messageReceived: msg});
+  });
+  const sendMessage = () => {
+    app.ports.receivedMsg.send("Hey Elm!");
+  };
+  </script>
+</body>
+</html>
