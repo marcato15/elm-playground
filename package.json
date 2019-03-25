@@ -1,0 +1,27 @@
+{
+  "name": "elm-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "build": "webpack",
+    "serve": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcato15/elm-playground.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcato15/elm-playground/issues"
+  },
+  "homepage": "https://github.com/marcato15/elm-playground#readme",
+  "dependencies": {
+    "phoenix": "^1.4.2"
+  },
+  "devDependencies": {
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  }
+}
